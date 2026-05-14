@@ -40,6 +40,14 @@ Since the dataset is imbalanced, we will aim for the highest possible macro f1-s
 
 ## Results
 
-After running the experiments, we see that the transformers outperformed the rest of models, although only by a small margin. Perhaps a bit unexpectedly, *Support Vector Regressor* trained on the balanced dataset achieved the highest macro f1 score on test data among the remaining models, outperforming even more "modern models". Also, training on balanced dataset generally increased model quality, with the exception of *MLP Regressor*, *Random Forest Regressor*, and the transformers. Interestingly, the transformers seemingly benefited from more training data, despite the imbalance. Instead of overfitting, **both** their per-class scores improved.
+After running the experiments, we see that the transformers outperformed the rest of models, although only by a small margin. Perhaps a bit unexpectedly, *Support Vector Regressor* trained on the balanced dataset achieved the highest macro f1 score on test data among the remaining models, outperforming even more "modern models".
+
+Lasso, and the default gradient boosting regressor both severely underperformed on this task, performing only the majority class on imbalanced dataset.
+
+Training on balanced dataset generally increased model quality, with the exception of *MLP Regressor*, *Random Forest Regressor*, and the transformers. Interestingly, the transformers seemingly benefited from more training data, despite the imbalance. Instead of overfitting on the majority class, **both** their per-class scores improved.
 
 ![Macro f1 score comparison](f1_macro_comparison.png)
+
+![F1 per class imbalanced](f1_per_class_imbalanced.png)
+
+![F1 per class balanced](f1_per_class_balanced.png)
