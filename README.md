@@ -46,8 +46,8 @@ Lasso, and the default gradient boosting regressor both severely underperformed 
 
 Training on balanced dataset generally increased model quality, with the exception of *MLP Regressor*, *Random Forest Regressor*, and the transformers. Interestingly, the transformers seemingly benefited from more training data, despite the imbalance. Instead of overfitting on the majority class, **both** their per-class scores improved.
 
-![Macro f1 score comparison](f1_macro_comparison.png)
+![Macro f1 score comparison](results/f1_macro_comparison.png)
 
-![F1 per class imbalanced](f1_per_class_imbalanced.png)
+![F1 per class imbalanced](results/f1_per_class_imbalanced.png)
 
-![F1 per class balanced](f1_per_class_balanced.png)
+![F1 per class balanced](results/f1_per_class_balanced.png)

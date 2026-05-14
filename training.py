@@ -44,9 +44,9 @@ def run_experiments(X_train: pd.Series, y_train: pd.DataFrame,
 
 X, y, X_test, y_test = load_data("data/preprocessed.json", "data/test_preprocessed.json")
 X_train, X_dev, y_train, y_dev = split(X, y)
-run_experiments(X_train, y_train, X_dev, y_dev, X_test, y_test, "model_comparison_results.csv")
+run_experiments(X_train, y_train, X_dev, y_dev, X_test, y_test, "results/model_comparison_results.csv")
 
 print("\n>>> Starting balanced dataset")
 X_bal, y_bal = (df_bal := balance_dataset(pd.concat([X, y], axis=1)))["postText"], df_bal[["truthMedian", "truthClass"]]
 X_train_bal, X_dev_bal, y_train_bal, y_dev_bal = split(X_bal, y_bal)
-run_experiments(X_train_bal, y_train_bal, X_dev_bal, y_dev_bal, X_test, y_test, "model_comparison_results_balanced.csv")
+run_experiments(X_train_bal, y_train_bal, X_dev_bal, y_dev_bal, X_test, y_test, "results/model_comparison_results_balanced.csv")

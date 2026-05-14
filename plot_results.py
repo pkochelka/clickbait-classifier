@@ -25,7 +25,7 @@ plt.ylim(0, 1.0)
 plt.xticks(rotation=45, ha='right')
 plt.legend(title='Data Strategy', loc='upper left')
 plt.tight_layout()
-plt.savefig('f1_macro_comparison.png')
+plt.savefig('results/f1_macro_comparison.png')
 plt.show()
 
 def plot_per_class(df, strategy_name, filename):
@@ -46,5 +46,5 @@ def plot_per_class(df, strategy_name, filename):
     plt.savefig(filename)
     plt.show()
 
-plot_per_class(results_df, 'Imbalanced', 'f1_per_class_imbalanced.png')
-plot_per_class(balanced_results_df, 'Balanced', 'f1_per_class_balanced.png')
+plot_per_class(results_df, 'Imbalanced', 'results/f1_per_class_imbalanced.png')
+plot_per_class(balanced_results_df, 'Balanced', 'results/f1_per_class_balanced.png')
